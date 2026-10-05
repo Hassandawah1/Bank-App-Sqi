@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -X POST http://localhost:5000/api/v1/products -H \"Content-Type: application/json\" -d '{\"productName\":\"Test Product\", \"productTitle\":\"Test Title\", \"productQuantity\":10}')",
+      "Bash(npm list *)",
+      "Bash(npm run *)",
+      "Bash(C-c)",
+      "Bash(curl -X POST http://localhost:5000/api/v1/products -H \"Content-Type: application/json\" -d '{\"productName\":\"Laptop\", \"productTitle\":\"Gaming Laptop\", \"productQuantity\":5}')"
+    ]
+  }
+}

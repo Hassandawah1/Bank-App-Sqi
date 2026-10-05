@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <h1>All Students</h1>
+
+   <div class="d-flex gap-2 flex-wrap">
+     <% students2.forEach((student, index) => { %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= student.firstname+" "+student.lastname %></h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary"><%= student.email %></h6>
+                <p class="card-text"><%= student.course %></p>
+               <div class="d-flex gap-2">
+                 <form action="/deleteStudent/<%= index %>" method="post" ><button class="card-link btn btn-dark">Delete</button></form>
+                <form action="/editStudent/<%= index %>" method="get">
+                    <button class="card-link btn btn-dark">Edit</button>
+                </form>
+               </div>
+            </div>
+        </div>
+    <% }) %>
+   </div>
+    
+</body>
+</html>

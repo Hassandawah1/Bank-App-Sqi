@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>All Students rev</h1>
+
+   <% students.forEach((student, index) => { %>
+    <h1><%= student.fullname %></h1>
+    <form action="/del/<%= index %>" method="post"> <button>Delete </button></form> 
+    <form action="/edit/<%= index %>" method="get"> <button>Edit </button></form> 
+   <% }) %>
+</body>
+</html>
